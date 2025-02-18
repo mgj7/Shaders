@@ -1,4 +1,4 @@
-# **WONKARCADE - The arcade monitor shader preset**
+# **WONKARCADE - The Arcade Monitor Shader Preset**
 
 The simple purpose of this shader preset is to mimic
 the brightness, saturation, and glow, typical of arcade CRT monitors.
