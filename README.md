@@ -3,7 +3,7 @@
 The simple purpose of this shader preset is to mimic
 the brightness, saturation, and glow, typical of arcade CRT monitors.
 
-Copyright (C) 2025 Wonkastatic - this shader preset is distributed under the terms of the Creative Commons Attribution Non Commercial. 4.0 License (creativecommons.org/licenses/by-nc/4.0/legalcode.en). This license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, for noncommercial purposes only. Commercial use must be authorized by the author.
+Copyright (C) 2025 Wonkastatic - this shader preset is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
 The individual shaders that make up this preset are the property of their respective authors (see Attribution).
 
