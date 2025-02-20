@@ -1,0 +1,191 @@
+#version 1.0
+
+/*
+WONKARCADE - The arcade monitor shader preset.
+
+The simple purpose of this shader preset is to mimic
+the brightness, saturation, and glow, typical of arcade CRT monitors.
+
+Copyright (C) 2025 Wonkastatic
+This shader preset is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2 of the License, or (at your option)
+any later version.
+
+The individual shaders that make up this preset are the property of their
+respective authors (see Attribution).
+
+Notes:
+- This shader preset works best with an output resolutions of 720p or higher
+(1080p recommended)
+
+- This shader preset works best with HDR monitors
+(if possible enable HDR rendering on your monitor)
+
+- This shader preset is fast and does not require high computing power
+(tested effectively at 60fps on RPi4 or higher)
+
+- This shader preset works equally well on both vertical and horizontal games
+
+- This shader preset is compatible with all frontends and emulators capable
+of running .glsl shaders (retroarch, openemu, etc.)
+
+- The target model of this shader preset is specifically arcade monitors 
+(Wells-Gardner, Zenith, and RCA tubes) not other types of CRT monitors
+such as Sony Trinitron (PVM, BVM) or consumer CRT televisions. For this
+reason this shader preset is intended to be used specifically with arcade games
+and not with console or computer games
+
+- One of the most common defects in shaders that imitate the image of CRT
+monitors is that of making the image excessively dark and opaque due to the 
+ypical effect of scanlines. This type of image quite closely resembles that of
+domestic CRT televisions but is profoundly different from the image of arcade
+monitors. Arcade games were known for their vibrant and bright colors.
+In accordance with its purpose, this shader preset produces high levels of
+brightness and saturation as a starting point. You are invited to try it in
+its original formula. If you find the luminescence excessive, you can always adjust
+your monitor settings, or edit shader parameters, so that the image quality better
+suits your preferences.
+
+- This shader preset took hundreds of hours of testing and recalibration. The
+technical aspect is not the most important part, however. No matter how much effort
+you put into imitating the visual rendering of an arcade monitor, it will never be
+possible to faithfully reproduce the image produced by a cathode ray tube on an LCD
+panel. The purpose of this shader preset is to create the feeling of an arcade monitor
+and make you feel again those emotions and that sense of joy that only that visual
+experience was able to offer …heart speaks in ways the mind can never understand :)
+
+Attribution:
+This shader preset is a fine and accurate blend of different software made by
+brilliant programmers who decided to share and make their talent available to everyone.
+My deepest respect and thanks go to them.
+
+- zfast crt shader
+(c) 2017 Greg Hogan (SoltanGris42) and (c) 2023 Jose Linares (Dogway), GNU GPL
+
+- image-adjustment shader
+by hunterk, public domain
+
+- kavase blur
+based on Ph.D Masaki Kawase's work and a shadertoy by Kubuxu
+
+I hope I haven't forgotten anyone!
+*/
+
+shaders = "9"
+shader0 = "wshaders/linearize.glsl"
+wrap_mode0 = "clamp_to_border"
+mipmap_input0 = "false"
+alias0 = ""
+float_framebuffer0 = "false"
+srgb_framebuffer0 = "true"
+scale_type_x0 = "source"
+scale_x0 = "1.000000"
+scale_type_y0 = "source"
+scale_y0 = "1.000000"
+shader1 = "wshaders/kawase0.glsl"
+filter_linear1 = "true"
+wrap_mode1 = "clamp_to_border"
+mipmap_input1 = "false"
+alias1 = ""
+float_framebuffer1 = "false"
+srgb_framebuffer1 = "true"
+scale_type_x1 = "source"
+scale_x1 = "1.000000"
+scale_type_y1 = "source"
+scale_y1 = "1.000000"
+shader2 = "wshaders/image-adjustment.glsl"
+filter_linear2 = "true"
+wrap_mode2 = "clamp_to_border"
+mipmap_input2 = "false"
+alias2 = ""
+float_framebuffer2 = "false"
+srgb_framebuffer2 = "true"
+scale_type_x2 = "source"
+scale_x2 = "1.000000"
+scale_type_y2 = "source"
+scale_y2 = "1.000000"
+shader3 = "wshaders/kawase1.glsl"
+filter_linear3 = "true"
+wrap_mode3 = "clamp_to_border"
+mipmap_input3 = "false"
+alias3 = ""
+float_framebuffer3 = "false"
+srgb_framebuffer3 = "true"
+scale_type_x3 = "source"
+scale_x3 = "1.000000"
+scale_type_y3 = "source"
+scale_y3 = "1.000000"
+shader4 = "wshaders/kawase2.glsl"
+filter_linear4 = "true"
+wrap_mode4 = "clamp_to_border"
+mipmap_input4 = "false"
+alias4 = ""
+float_framebuffer4 = "false"
+srgb_framebuffer4 = "true"
+scale_type_x4 = "source"
+scale_x4 = "1.000000"
+scale_type_y4 = "source"
+scale_y4 = "1.000000"
+shader5 = "wshaders/kawase3.glsl"
+filter_linear5 = "true"
+wrap_mode5 = "clamp_to_border"
+mipmap_input5 = "false"
+alias5 = ""
+float_framebuffer5 = "false"
+srgb_framebuffer5 = "true"
+scale_type_x5 = "source"
+scale_x5 = "1.000000"
+scale_type_y5 = "source"
+scale_y5 = "1.000000"
+shader6 = "wshaders/delinearize.glsl"
+filter_linear6 = "true"
+wrap_mode6 = "clamp_to_border"
+mipmap_input6 = "false"
+alias6 = ""
+float_framebuffer6 = "false"
+srgb_framebuffer6 = "false"
+shader7 = "wshaders/screen_combine.glsl"
+wrap_mode7 = "clamp_to_border"
+mipmap_input7 = "false"
+alias7 = ""
+float_framebuffer7 = "false"
+srgb_framebuffer7 = "false"
+shader8 = "wshaders/zfast_crt_geo.glsl"
+filter_linear8 = "true"
+wrap_mode8 = "clamp_to_border"
+mipmap_input8 = "false"
+alias8 = ""
+float_framebuffer8 = "false"
+srgb_framebuffer8 = "false"
+parameters = "ia_target_gamma;ia_monitor_gamma;ia_overscan_percent_x;ia_overscan_percent_y;ia_saturation;ia_contrast;ia_luminance;ia_black_level;ia_bright_boost;ia_R;ia_G;ia_B;ia_ZOOM;ia_XPOS;ia_YPOS;ia_TOPMASK;ia_BOTMASK;ia_LMASK;ia_RMASK;ia_GRAIN_STR;ia_SHARPEN;ia_FLIP_HORZ;ia_FLIP_VERT;SCANLINE_WEIGHT;MASK_DARK;BLURSCALEX;LOWLUMSCAN;HILUMSCAN;BRIGHTBOOST;MASK_FADE"
+ia_target_gamma = "2.200000"
+ia_monitor_gamma = "2.200000"
+ia_overscan_percent_x = "0.000000"
+ia_overscan_percent_y = "0.000000"
+ia_saturation = "1.000000"
+ia_contrast = "0.900000"
+ia_luminance = "0.700000"
+ia_black_level = "0.000000"
+ia_bright_boost = "0.000000"
+ia_R = "1.000000"
+ia_G = "1.000000"
+ia_B = "1.000000"
+ia_ZOOM = "1.000000"
+ia_XPOS = "0.000000"
+ia_YPOS = "0.000000"
+ia_TOPMASK = "0.000000"
+ia_BOTMASK = "0.000000"
+ia_LMASK = "0.000000"
+ia_RMASK = "0.000000"
+ia_GRAIN_STR = "0.000000"
+ia_SHARPEN = "0.000000"
+ia_FLIP_HORZ = "0.000000"
+ia_FLIP_VERT = "0.000000"
+SCANLINE_WEIGHT = "2.000000"
+MASK_DARK = "0.100000"
+BLURSCALEX = "1.000000"
+LOWLUMSCAN = "3.000000"
+HILUMSCAN = "8.000000"
+BRIGHTBOOST = "1.500000"
+MASK_FADE = "0.800000"
