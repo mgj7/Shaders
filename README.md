@@ -34,9 +34,11 @@ I hope I haven't forgotten anyone!
 
 ## Screenshots
 
-![1943_2](https://github.com/user-attachments/assets/9d94922b-a387-46c8-abd1-9df30d3fa46c)
+
+![1943_3](https://github.com/user-attachments/assets/aec790e2-2344-41e5-a679-cae5bfd7050d)
 
 
+![dakaimura2](https://github.com/user-attachments/assets/d6bbb7a4-5ce4-4dee-a771-10d4a7438932)
 
 
 
